@@ -3,8 +3,13 @@ import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 
 
-function DogList(){
-
+function DogList({ dogList }) {
+  return (
+    <ul>{dogList.map(dog =>
+      <li key={dog.name}>name:{dog.name} age:{dog.age}
+        <img src="../public/{dog.src}" />
+      </li>)}</ul>
+  );
 
 }
 
